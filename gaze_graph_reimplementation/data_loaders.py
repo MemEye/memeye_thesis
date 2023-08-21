@@ -10,6 +10,7 @@ from keras.utils import to_categorical
 from process_data import construct_matrices
 
 def load_gaze_graph_csv(location):
+    #TODO: doc strings
     df = pd.read_csv(location)
     df.columns = ['x', 'y']
     # print(df)
@@ -17,6 +18,7 @@ def load_gaze_graph_csv(location):
     return zipped
 
 def load_gg_dataset(data_location, class_to_num, num_classes = 6, k_hops = 2):
+    #TODO: doc strings
     folders = [os.path.join(data_location, f) for f in os.listdir(data_location) if os.path.isdir(os.path.join(data_location, f))]
     folder_to_file_paths = dict()
     for folder in folders:

@@ -9,9 +9,11 @@ import os
 from keras.utils import to_categorical
 
 def euclid_distance(next, curr):
+    #TODO: doc strings
     return math.sqrt((next[0] - curr[0])**2 + (next[1] - curr[1])**2)
 
 def gaze_orientation(next, curr):
+    #TODO: doc strings
     try:
         angle = math.atan(((next[1] - curr[1])/(next[0] - curr[0])))
     except:
@@ -39,4 +41,4 @@ def construct_matrices(nodes: List[float], k_hops: int):
                 m_dist[i, j] = dist
                 m_orient[i, j] = orient
 
-    return np.dstack((m_dist, m_orient))
+    return np.dstack((m_dist, m_orient)) #TODO: implement graphing for debugging

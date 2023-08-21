@@ -11,6 +11,7 @@ from data_loaders import load_gg_dataset
 import yaml
 
 def create_tf_model(num_classes, dropout_rate = 0.01):
+    #TODO: doc strings
     #using relu activation
     #reshape matrices to 90x90s
     conv1 = keras.layers.Conv2D(32, (5, 5), input_shape=(90, 90, 2), activation='relu')
@@ -39,9 +40,11 @@ def create_tf_model(num_classes, dropout_rate = 0.01):
     return model
 
 def train_model(model, train_dataset, epochs = 10):
+    #TODO: doc strings
     model.fit(train_dataset, epochs=epochs)
 
 def run_pipeline(num_classes, sample_set, class_to_num):
+    #TODO: doc strings
     train_dataset, test_dataset = load_gg_dataset(sample_set, class_to_num)
 
     model = create_tf_model(num_classes= num_classes) #browse, play, read, search, watch, write
