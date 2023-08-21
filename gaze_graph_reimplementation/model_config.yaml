@@ -1,0 +1,15 @@
+parameters:
+  gaze_graph_config:
+    gaze_graph_data: True
+    data_location: "/Users/monaabd/Desktop/meng/GazeGraph/DesktopActivity/"
+    class_to_num:
+      browse: 0
+      play: 1
+      read: 2
+      search: 3
+      watch: 4
+      write: 5
+
+  fluid_data_config:
+    fluid_data: False
+    data_location: '/Users/monaabd/Desktop/meng/Data_Pupil_Labs_Visual_Recog_11-People'
